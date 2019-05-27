@@ -1,0 +1,264 @@
+@font-face {
+  font-family: DSDig;
+  font-style: normal;
+  src: url("./fonts/DSDig/DS-Digital.ttf");
+  src: url("./fonts/DSDig/DS-Digital.eot");
+  src: url("./fonts/DSDig/DS-Digital.woff");
+}
+@font-face {
+  font-family: DSDig;
+  font-style: bold;
+  src: url("./fonts/DSDig/DS-Digital-Bold.ttf");
+  src: url("./fonts/DSDig/DS-Digital-Bold.eot");
+  src: url("./fonts/DSDig/DS-Digital-Bold.woff");
+}
+.wrapper__clock {
+  display: inline-block;
+  margin-left: 50%;
+  margin-top: 50px;
+  transform: translateX(-50%);
+  position: relative;
+}
+.wrapper__clock .clock__arrow {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+}
+.wrapper__clock .clock__arrow img {
+  max-width: none;
+}
+.wrapper__clock .clock__arrow_minute {
+  transform: translate(-50%, -50%) rotate(30deg);
+  transform-origin: top;
+}
+.wrapper__clock .clock__arrow_minute img {
+  position: relative;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.wrapper__clock .clock__arrow_hours {
+  transform: translate(-50%, -50%) rotate(270deg);
+  transform-origin: top;
+}
+.wrapper__clock .clock__arrow_hours img {
+  position: relative;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+.wrapper__clock .phrases {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper__clock .phrases .phrase {
+  width: 1px;
+  height: 1px;
+  position: relative;
+  cursor: pointer;
+  left: 0px;
+  top: -10px;
+  transform-origin: bottom center;
+  color: #eaeaea;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  transition: color 0.5s ease;
+}
+.wrapper__clock .phrases .phrase:hover {
+  color: #f00;
+  font-size: 10px;
+  font-weight: bold;
+}
+.wrapper__clock .phrases .phrase > span {
+  width: 10px;
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 0;
+  height: 163px;
+}
+.wrapper__clock .phrases .phrase:nth-child(1) {
+  transform: rotate(285deg);
+}
+.wrapper__clock .phrases .phrase:nth-child(2) {
+  transform: rotate(10deg);
+}
+.wrapper__clock .phrases .phrase:nth-child(3) {
+  transform: rotate(185deg);
+}
+.wrapper__clock .phrases .phrase:nth-child(4) {
+  transform: rotate(120deg);
+}
+.wrapper__clock .phrases .phrase:nth-child(5) {
+  transform: rotate(70deg);
+}
+.wrapper__clock .phrases .phrase .symbol0 {
+  transform: rotate(0deg);
+}
+.wrapper__clock .phrases .phrase .symbol1 {
+  transform: rotate(3.4deg);
+}
+.wrapper__clock .phrases .phrase .symbol2 {
+  transform: rotate(6.8deg);
+}
+.wrapper__clock .phrases .phrase .symbol3 {
+  transform: rotate(10.2deg);
+}
+.wrapper__clock .phrases .phrase .symbol4 {
+  transform: rotate(13.6deg);
+}
+.wrapper__clock .phrases .phrase .symbol5 {
+  transform: rotate(17deg);
+}
+.wrapper__clock .phrases .phrase .symbol6 {
+  transform: rotate(20.4deg);
+}
+.wrapper__clock .phrases .phrase .symbol7 {
+  transform: rotate(23.8deg);
+}
+.wrapper__clock .phrases .phrase .symbol8 {
+  transform: rotate(27.2deg);
+}
+.wrapper__clock .phrases .phrase .symbol9 {
+  transform: rotate(30.599999999999998deg);
+}
+.wrapper__clock .phrases .phrase .symbol10 {
+  transform: rotate(34deg);
+}
+.wrapper__clock .phrases .phrase .symbol11 {
+  transform: rotate(37.4deg);
+}
+.wrapper__clock .phrases .phrase .symbol12 {
+  transform: rotate(40.8deg);
+}
+.wrapper__clock .phrases .phrase .symbol13 {
+  transform: rotate(44.199999999999996deg);
+}
+.wrapper__clock .phrases .phrase .symbol14 {
+  transform: rotate(47.6deg);
+}
+.wrapper__clock .phrases .phrase .symbol15 {
+  transform: rotate(51deg);
+}
+.wrapper__clock .phrases .phrase .symbol16 {
+  transform: rotate(54.4deg);
+}
+.wrapper__clock .phrases .phrase .symbol17 {
+  transform: rotate(57.8deg);
+}
+.wrapper__clock .phrases .phrase .symbol18 {
+  transform: rotate(61.199999999999996deg);
+}
+.wrapper__clock .phrases .phrase .symbol19 {
+  transform: rotate(64.6deg);
+}
+.wrapper__clock .phrases .phrase .symbol20 {
+  transform: rotate(68deg);
+}
+.wrapper__clock .phrases .phrase .symbol21 {
+  transform: rotate(71.39999999999999deg);
+}
+.wrapper__clock .phrases .phrase .symbol22 {
+  transform: rotate(74.8deg);
+}
+.wrapper__clock .phrases .phrase .symbol23 {
+  transform: rotate(78.2deg);
+}
+.wrapper__clock .phrases .phrase .symbol24 {
+  transform: rotate(81.6deg);
+}
+.wrapper__clock .phrases .phrase .symbol25 {
+  transform: rotate(85deg);
+}
+.wrapper__clock .phrases .phrase .symbol26 {
+  transform: rotate(88.39999999999999deg);
+}
+.wrapper__clock .phrases .phrase .symbol27 {
+  transform: rotate(91.8deg);
+}
+.wrapper__clock .phrases .phrase .symbol28 {
+  transform: rotate(95.2deg);
+}
+.wrapper__clock .phrases .phrase .symbol29 {
+  transform: rotate(98.6deg);
+}
+.wrapper__clock .phrases .phrase .symbol30 {
+  transform: rotate(102deg);
+}
+.wrapper__clock img {
+  max-width: 100%;
+}
+.wrapper__clock .clock__timeZone {
+  position: absolute;
+  left: 27%;
+  transform: translateX(-27%);
+  bottom: 42%;
+  font: bold 24px DSDig;
+  color: #fff;
+}
+.wrapper__clock .clock__time {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28%;
+  font: bold 70px DSDig;
+  color: #fff;
+}
+.wrapper__clock .clock__time b {
+  font-size: 40px;
+  margin: 0 5px;
+  animation: tick 1.5s infinite linear;
+}
+@-moz-keyframes tick {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes tick {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes tick {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tick {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
