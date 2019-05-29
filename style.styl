@@ -1,3 +1,8 @@
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+	
 @font-face
 	font-family DSDig
 	font-style normal
@@ -10,6 +15,7 @@
 	src url(./fonts/DSDig/DS-Digital-Bold.ttf)
 	src url(./fonts/DSDig/DS-Digital-Bold.eot)
 	src url(./fonts/DSDig/DS-Digital-Bold.woff)
+
 
 .wrapper__clock
 	display inline-block
@@ -27,7 +33,7 @@
 		img
 			max-width none 
 	.clock__arrow_minute
-		transform: translate(-50%, -50%)  rotate(30deg)
+		transform: translate(-50%, -50%)  rotate(0deg)
 		transform-origin: top;
 		img
 			position: relative;
@@ -35,24 +41,26 @@
 			top 100%
 			transform: translate(-50%, -100%)
 	.clock__arrow_hours
-		transform: translate(-50%,-50%) rotate(270deg)
+		transform: translate(-50%, -50%)  rotate(0deg)
 		transform-origin: top;
 		img
 			position: relative;
 			left 50%
 			top 100%
 			transform: translate(-50%, -100%)
+	
 	.phrases
 		position absolute
-		width 100%
-		height 100%
+		left 50%
+		top 50%
+		transform: translate(-50%, -50%)
 		display flex
 		align-items center
 		justify-content center
 		.phrase
 			width 1px
 			height 1px
-			position relative
+			position absolute
 			cursor pointer
 			left 0px
 			top -10px
@@ -66,13 +74,12 @@
 				color: red
 				font-size 10px
 				font-weight bold
-			>
-				span
-					width 10px
-					transform-origin: bottom center;
-					position absolute
-					bottom 0
-					height: 163px;
+			> span 
+				width 0
+				transform-origin: bottom ;
+				position absolute
+				bottom 0
+				height: 165px;
 			&:nth-child(1)
 				transform: rotate(285deg)
 			&:nth-child(2)
@@ -86,12 +93,10 @@
 			for num in (0..30)
 				.symbol{num}
 					transform: "rotate(%sdeg)" % (num*3.4)
-	img
-		max-width 100%
+	
 	.clock__timeZone
 		position absolute
 		left 27%
-		transform translateX(-27%)
 		bottom 42%
 		font bold 24px DSDig
 		color: white

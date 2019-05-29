@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: DSDig;
   font-style: normal;
@@ -31,7 +36,7 @@
   max-width: none;
 }
 .wrapper__clock .clock__arrow_minute {
-  transform: translate(-50%, -50%) rotate(30deg);
+  transform: translate(-50%, -50%) rotate(0deg);
   transform-origin: top;
 }
 .wrapper__clock .clock__arrow_minute img {
@@ -41,7 +46,7 @@
   transform: translate(-50%, -100%);
 }
 .wrapper__clock .clock__arrow_hours {
-  transform: translate(-50%, -50%) rotate(270deg);
+  transform: translate(-50%, -50%) rotate(0deg);
   transform-origin: top;
 }
 .wrapper__clock .clock__arrow_hours img {
@@ -52,8 +57,9 @@
 }
 .wrapper__clock .phrases {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +67,7 @@
 .wrapper__clock .phrases .phrase {
   width: 1px;
   height: 1px;
-  position: relative;
+  position: absolute;
   cursor: pointer;
   left: 0px;
   top: -10px;
@@ -78,11 +84,11 @@
   font-weight: bold;
 }
 .wrapper__clock .phrases .phrase > span {
-  width: 10px;
-  transform-origin: bottom center;
+  width: 0;
+  transform-origin: bottom;
   position: absolute;
   bottom: 0;
-  height: 163px;
+  height: 165px;
 }
 .wrapper__clock .phrases .phrase:nth-child(1) {
   transform: rotate(285deg);
@@ -192,13 +198,9 @@
 .wrapper__clock .phrases .phrase .symbol30 {
   transform: rotate(102deg);
 }
-.wrapper__clock img {
-  max-width: 100%;
-}
 .wrapper__clock .clock__timeZone {
   position: absolute;
   left: 27%;
-  transform: translateX(-27%);
   bottom: 42%;
   font: bold 24px DSDig;
   color: #fff;
